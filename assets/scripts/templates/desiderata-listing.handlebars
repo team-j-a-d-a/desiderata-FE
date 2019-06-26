@@ -1,0 +1,16 @@
+<!-- handlebars placeholder for future branch work -->
+
+{{#each lists as |list|}}
+  {{log list}}
+  <section data-id="{{list.id}}">
+    <h6>ID:</h6>
+    <div>
+      <p>
+      {{#if list.id}}
+        {{list.id}}
+      {{else}}
+        No id provided.
+      {{/if}}
+    </p>
+    </div>
+</section>

@@ -1,8 +1,22 @@
 <!-- handlebars placeholder for future branch work -->
+<!-- ID is user id -->
+<!--  -->
 
 {{#each lists as |list|}}
   {{log list}}
   <section data-id="{{list.id}}">
+
+    <h6>Title:</h6>
+    <div>
+      <p>
+        {{#if list.title}}
+          {{list.title}}
+        {{else}}
+          No title provided
+        {{/if}}
+      </p>
+    </div>
+
     <h6>ID:</h6>
     <div>
       <p>
@@ -13,4 +27,30 @@
       {{/if}}
     </p>
     </div>
+
+  <h6>Description:</h6>
+    <div>
+      <p>
+        {{#if list.description}}
+          {{list.description}}
+        {{else}}
+          No description provided
+        {{/if}}
+      </p>
+    </div>
+
+  <h6>Status:</h6>
+    <div>
+      <p>
+        {{#if list.status=true}}
+          <p class="list-true">
+            {{list.status}}
+          </p>
+        {{else}}
+        <p class="list-false">
+          {{list.status}}
+        </p>
+      </p>
+    </div>
+
 </section>

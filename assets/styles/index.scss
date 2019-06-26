@@ -1,5 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
 
 h1 {
+  font-family: 'Tangerine', serif;
+  font-size: 70px;
+  text-shadow: 4px 4px 4px #aaa;
   text-align: center;
-}
+  color: black;
+  }

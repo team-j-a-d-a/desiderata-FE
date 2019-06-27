@@ -8,4 +8,8 @@
 
 $(() => {
   // your JS code goes here
+$('#idGetList').on('submit', searchEvents.onShowLabs)
+// $('#bucketList').on('submit', '.update-form', searchEvents.onUpdateLabs)
+// $('#bucketList').on('click', '.remove-appliance', searchEvents.onDestroyLabs)
+// $('.#bucketList').on('click', '.clearLabsButton', searchEvents.onClearLabs)
 })

@@ -1,5 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
+// handlebars specific CSS
+.acivityBox {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding: 30px;
+}
+
 h1 {
   text-align: center;
 }

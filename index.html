@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Desiderata</title>
+      <title>BucketList</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,78 +12,72 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div id = "sign-up2" class = "topnav">
-  <h2> Sign Up! </h2>
+
+  <h2>Welcome to Anna's Sports Calendar</h2>
+  <p id="error-message" class="user-feedback"></p>
+
+  <p id="create-activity-message" class="user-feedback">STAY TUNED FOR USER MESSAGES</p>
+  <br>
+  <br>
+<div class = "center">
+<nav>
   <form id="sign-up">
-    <input type="email" name="credentials[email]" placeholder="Enter Email" />
-    <input type="password" name="credentials[password]" placeholder="Enter a Password" />
-    <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Your Password" />
-    <input type="submit" value="Sign Up" />
+    <input name="credentials[email]" type="text" placeholder="email">
+    <input name="credentials[password]" type="password" placeholder="password">
+    <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+    <br>
+    <br>
+    <input type="submit" value="Sign Up" >
   </form>
-</body>
-</div>
-
-<div id="sign-in2">
-  <h2> Sign In </h2>
+  <br>
   <form id="sign-in">
-    <input type="email" name="credentials[email]" placeholder="Enter Email" />
-    <input type="password" name="credentials[password]" placeholder="Enter a Password" />
-    <input type="submit" value="Sign In" />
+    <input name="credentials[email]" type="text" placeholder="email">
+    <input name="credentials[password]" type="password" placeholder="password">
+    <input type="submit" value="Sign In">
   </form>
+  <form id="change-password" class = "hide">
+    <input name="passwords[old]" type="password" placeholder="old password">
+    <input name="passwords[new]" type="password" placeholder="new password">
+    <br>
+    <br>
+    <input type="submit" value="Change Password">
+  </form>
+  <br>
+
+  <!-- <form id="activity-create" class = "hide">
+    <input type="submit" value="Create a new activity!">
+  </form> -->
+  <form id="create-activity" class = "hide">
+    <h2>Let's create a new activity!</h2>
+    <input name="sport" type="text" placeholder="sports activity">
+    <input name="date" type="date" placeholder="date">
+    <input name="duration" type="number" placeholder="how long">
+    <input name="location" type="text" placeholder="where">
+    <br>
+    <br>
+    <input type="submit" value="Create Activity">
+
+    <br>
+    <br>
+    <div class="nav-buttons">
+        <button id="getActivitiesButton" class="btn btn-info mr-2 hide">Get My Activities!</button>
+
+        <!-- <button id="updateActivityButton" class="btn btn-outline-info">Delete Activity!</button> -->
+    </div>
+  </form>
+</nav>
+<main>
+  <div id="content" class="content"></div>
+</main>
 </div>
 
-  <div id ="change-pw2">
-  <h2>Change Password</h2>
-  <form id="change-pw">
-    <input type="password" name="passwords[old]" placeholder="Old Password" />
-    <input type="password" name="passwords[new]" placeholder="New Password" />
-    <input type="submit" value="Change Password" />
-  </form>
-  </div>
-
-  <div id = "sign-out2">
-  <h2> Sign Out </h2>
-  <form id="sign-out">
+<br>
+<div class = "center">
+<form id="sign-out" class = "hide">
     <input type="submit" value="Sign Out" />
-  </form>
-</div>
-
-<div id ="change-pw2">
-<h2>Change Password</h2>
-<form id="change-pw">
-  <input type="password" name="passwords[old]" placeholder="Old Password" />
-  <input type="password" name="passwords[new]" placeholder="New Password" />
-  <input type="submit" value="Change Password" />
 </form>
 </div>
 
-<div id = "sign-out2">
-<h2> Sign Out </h2>
-<form id="sign-out">
-  <input type="submit" value="Sign Out" />
-</form>
-</div>
 
-  <div id="list"></div>
-
-<h1>Desiderata
-<img src="public/kick-the-bucket.jpg" alt="logo" width="140" height="140" id="logo">
-</h1>
-
-  <div class ="addArtist" id="addArtistId">
-    <form id ="create">
-      <input type="text" name="list[name]" placeholder="Title" />
-      <input type="text" name="list[description]" placeholder="Description"  />
-      <input type="submit" value="Add new item" />
-    </form>
-  </div>
-
-  <div class ="getList" id="idGetList">
-    <form id ="getList">
-      <input type="submit" value="Get Bucket List" />
-    </form>
-  </div>
-
-  <div id="bucketList" class=""></div>
     </body>
 </html>

@@ -1,0 +1,54 @@
+{{#each activities as |activity|}}
+
+  <section data-id="{{activity.id}}">
+  <div class = 'hide handlebars'>
+      <h3>Sport: {{limit activity.sport 15}}</h3>
+      <h3>Date: {{localized activity.date}}</h3>
+      <h3>Location: {{limit activity.location 15}}</h3>
+
+    <button class='btn btn-danger delete-activity' data-id="{{activity.id}}">Delete</button>
+  <div class='update-activity'>
+    <button class='btn btn-danger update-activity' data-id="{{activity.id}}">Update</button>
+
+
+    <form class="hide update-activity-form">
+      <h2>Make an update!</h2>
+      <div class='update-sport'>Activity Id: {{activity.id}}</div>
+      <input name='activity[sport]' value="{{activity.sport}}" type="text" placeholder="sports activity">
+      <input name='activity[date]' value="{{activity.date}}" type="date" placeholder="date">
+      <input name="activity[duration]" value="{{activity.duration}}" type="text" placeholder="how long">
+      <input name="activity[location]" value="{{activity.location}}"  type="text" placeholder="where">
+      <input type="submit" value="Update Activity">
+    </form>
+  </div>
+</div>
+
+
+    <!-- {{> partial}} -->
+  </section>
+
+{{/each}}
+
+
+
+{{!---
+{{#each books as |book|}}
+  {{log book}}
+  <section data-id="{{book.id}}">
+    <h6>Title:</h6>
+    <h3>
+      {{limit book.title 15}}
+    </h2>
+    <h6>Author:</h6>
+    <p>
+      {{#if book.author}}
+        {{book.author}}
+      {{else}}
+        No author provided.
+      {{/if}}
+    </p>
+    <button class='btn btn-danger' data-id="{{book.id}}">Delete</button>
+    <!-- {{> partial}} -->
+  </section>
+
+{{/each}}--}}

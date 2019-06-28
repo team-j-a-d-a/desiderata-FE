@@ -1,5 +1,4 @@
 'use strict'
-
 const onAddActivitySuccess = responseData => {
   console.log('Success', responseData)
 }

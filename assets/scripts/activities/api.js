@@ -1,6 +1,6 @@
 'use strict'
-const config = require('../scripts/config')
-const store = require('../scripts/store')
+const config = require('assets/config.js')
+const store = require('assets/store.js')
 
 const addActivity = (formData) => {
   console.log(store)

@@ -1,9 +1,9 @@
 'use strict'
-const config = require('../scripts/config')
-const store = require('../scripts/store')
+const config = require('../config')
+const store = require('../store')
 
 const addActivity = (formData) => {
-  console.log(store)
+  console.log(formData)
   return $.ajax({
     url: config.apiUrl + `/activities`,
     method: 'POST',

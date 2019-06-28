@@ -5,7 +5,7 @@ const store = require('../store.js')
 const onSignUpSuccess = responseData => {
   console.log('success', responseData)
   $('#message').removeClass('d-none')
-  $('#message').text('You have successfully signed up!')
+  $('#message').text('You have successfully signed up!').addClass('alert-success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('form').trigger('reset')
   $('#sign-up2').addClass('d-none')
@@ -14,7 +14,7 @@ const onSignUpSuccess = responseData => {
 const onSignUpFailure = responseData => {
   console.log('failure', responseData)
   $('#message').removeClass('d-none')
-  $('#message').text('Sign up failed')
+  $('#message').text('Sign up failed').addClass('alert-danger')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('form').trigger('reset')
 }
@@ -23,16 +23,17 @@ const onSignInSuccess = responseData => {
   $('#idGetList').removeClass('d-none')
   $('#addActivityId').removeClass('d-none')
   $('#bucketList').removeClass('d-none')
+  $('#SOCP').removeClass('d-none')
   console.log('success', responseData)
   // $('#createForHide').removeClass('d-none')
   $('#message').removeClass('d-none')
-  $('#message').text("You're in! Welcome!")
+  $('#message').text("You're in! Welcome!").addClass('alert-success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
-  $('#sign-out2').removeClass('d-none')
-  $('#change-pw2').removeClass('d-none')
+  // $('#sign-out2').removeClass('d-none')
+  // $('#change-pw2').removeClass('d-none')
   $('#getList').removeClass('d-none')
-  $('#sign-in2').addClass('d-none')
-  $('#sign-up2').addClass('d-none')
+  // $('#sign-in2').addClass('d-none')
+  $('#SUSI').addClass('d-none')
   $('form').trigger('reset')
   // whenever we sign in successfully, the user is returned in the response so we store it
   // for any of our authenticated API calls
@@ -45,7 +46,7 @@ const onSignInSuccess = responseData => {
 const onSignInFailure = responseData => {
   console.log('failure', responseData)
   $('#message').removeClass('d-none')
-  $('#message').text('Sign in failed. Try Again!')
+  $('#message').text('Sign in failed. Try Again!').addClass('alert-danger')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#message').addClass('failure')
   $('form').trigger('reset')
@@ -53,7 +54,7 @@ const onSignInFailure = responseData => {
 
 const onChangePasswordSuccess = () => {
   $('#message').removeClass('d-none')
-  $('#message').text('Changed password successfully!')
+  $('#message').text('Changed password successfully!').addClass('alert-success')
   // $('#message').removeClass()
   $('#message').addClass('success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
@@ -61,32 +62,36 @@ const onChangePasswordSuccess = () => {
 }
 
 const onChangePasswordFailure = () => {
-  $('#message').text('change password failed ')
+  // $('#message').removeClass('alert-success')
+  $('#message').removeClass('d-none')
+  $('#message').text('change password failed').addClass('alert-danger')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
-  $('#message').removeClass()
+  // $('#message').removeClass()
   $('#message').addClass('failure')
   $('form').trigger('reset')
 }
 
 const onSignOutSuccess = () => {
-  $('#getAllArtists').addClass('d-none')
-  $('#hideAddArtist').addClass('d-none')
-  $('#artistList').addClass('d-none')
-  $('#artistList').html('')
+  $('#idGetList').addClass('d-none')
+  $('#addActivityId').addClass('d-none')
+  $('#bucketList').addClass('d-none')
+  // $('##bucketList').html('')
+  $('#message').removeClass('alert-danger')
   $('#message').removeClass('d-none')
-  $('#message').text('Goodbye for now 👋')
+  $('#message').text('Goodbye for now 👋').addClass('alert-success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
-  $('#sign-out2').addClass('d-none')
-  $('#change-pw2').addClass('d-none')
-  $('#createForHide').addClass('d-none')
-  $('#notification').addClass('d-none')
-  $('#sign-in2').removeClass('d-none')
-  $('#sign-up2').removeClass('d-none')
-  $('#endMessage').addClass('d-none')
+  $('#SOCP').addClass('d-none')
+  $('#SUSI').removeClass('d-none')
+  // $('#change-pw2').addClass('d-none')
+  // $('#createForHide').addClass('d-none')
+  // $('#notification').addClass('d-none')
+  // $('#sign-in2').removeClass('d-none')
+  // $('#sign-up2').removeClass('d-none')
+  // $('#endMessage').addClass('d-none')
 }
 
 const onSignOutFailure = () => {
-  $('#message').text('sign out failed ')
+  $('#message').text('sign out failed ').addClass('alert-danger')
   // $('#message').removeClass()
   $('#message').addClass('failure')
 }

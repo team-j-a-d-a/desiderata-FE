@@ -13,7 +13,7 @@
     </head>
     <body>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="SUSI">
           <a class="navbar-brand" href="#">Welcome!</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -79,6 +79,16 @@
 
         </nav>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-none" id="SOCP">
+  <form id="sign-out">
+    <input type="submit" value="Sign Out" />
+  </form>
+  <form id="change-pw">
+    <input type="password" name="passwords[old]" placeholder="Old Password" />
+    <input type="password" name="passwords[new]" placeholder="New Password" />
+    <input type="submit" value="Change Password" />
+  </form>
+</nav>
 
       <h2 id="message"></h2>
 
@@ -103,7 +113,7 @@
   </form>
 </div> -->
 
-  <div id ="change-pw2" class="d-none">
+  <!-- <div id ="change-pw2" class="d-none">
   <h5>Change Password</h5>
   <form id="change-pw">
     <input type="password" name="passwords[old]" placeholder="Old Password" />
@@ -118,23 +128,6 @@
   <form id="sign-out">
     <input type="submit" value="Sign Out" />
   </form>
-</div>
-</div>
-
-<!-- <div id ="change-pw2">
-<h2>Change Password</h2>
-<form id="change-pw">
-  <input type="password" name="passwords[old]" placeholder="Old Password" />
-  <input type="password" name="passwords[new]" placeholder="New Password" />
-  <input type="submit" value="Change Password" />
-</form>
-</div>
-
-<div id = "sign-out2">
-<h2> Sign Out </h2>
-<form id="sign-out">
-  <input type="submit" value="Sign Out" />
-</form>
 </div> -->
 
   <div id="list"></div>

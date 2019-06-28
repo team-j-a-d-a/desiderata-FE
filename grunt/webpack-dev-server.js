@@ -20,7 +20,7 @@ const opn = require('opn')
 let firstBuild = true
 
 // port for development server
-const port = 7165
+const port = 4741
 
 // make `jQuery` and `$` available in the development console
 webpackConfig.module.rules.push({

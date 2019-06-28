@@ -12,6 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+
+      <h2 id="message"></h2>
+
       <div id = "sign-up2" class = "topnav">
   <h2> Sign Up! </h2>
   <form id="sign-up">
@@ -48,7 +51,7 @@
   </form>
 </div>
 
-<div id ="change-pw2">
+<!-- <div id ="change-pw2">
 <h2>Change Password</h2>
 <form id="change-pw">
   <input type="password" name="passwords[old]" placeholder="Old Password" />
@@ -62,7 +65,7 @@
 <form id="sign-out">
   <input type="submit" value="Sign Out" />
 </form>
-</div>
+</div> -->
 
   <div id="list"></div>
 
@@ -70,7 +73,7 @@
 <img src="public/kick-the-bucket.jpg" alt="logo" width="140" height="140" id="logo">
 </h1>
 
-  <div class ="addArtist" id="addArtistId">
+  <div class ="addActivity" id="addActivityId">
     <form id ="create">
       <input type="text" name="list[name]" placeholder="Title" />
       <input type="text" name="list[description]" placeholder="Description"  />
@@ -84,6 +87,6 @@
     </form>
   </div>
 
-  <div id="bucketList" class=""></div>
+  <div id="bucketList" class="d-none"></div>
     </body>
 </html>

@@ -21,7 +21,7 @@ const onSignUpFailure = responseData => {
 
 const onSignInSuccess = responseData => {
   $('#idGetList').removeClass('d-none')
-  $('#hideAddArtist').removeClass('d-none')
+  $('#addActivityId').removeClass('d-none')
   $('#bucketList').removeClass('d-none')
   console.log('success', responseData)
   // $('#createForHide').removeClass('d-none')

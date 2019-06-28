@@ -15,8 +15,9 @@
 
       <h2 id="message"></h2>
 
+<div id="auth">
       <div id = "sign-up2" class = "topnav">
-  <h2> Sign Up! </h2>
+  <h5> Sign Up! </h5>
   <form id="sign-up">
     <input type="email" name="credentials[email]" placeholder="Enter Email" />
     <input type="password" name="credentials[password]" placeholder="Enter a Password" />
@@ -27,7 +28,7 @@
 </div>
 
 <div id="sign-in2">
-  <h2> Sign In </h2>
+  <h5> Sign In </h5>
   <form id="sign-in">
     <input type="email" name="credentials[email]" placeholder="Enter Email" />
     <input type="password" name="credentials[password]" placeholder="Enter a Password" />
@@ -35,8 +36,8 @@
   </form>
 </div>
 
-  <div id ="change-pw2">
-  <h2>Change Password</h2>
+  <div id ="change-pw2" class="d-none">
+  <h5>Change Password</h5>
   <form id="change-pw">
     <input type="password" name="passwords[old]" placeholder="Old Password" />
     <input type="password" name="passwords[new]" placeholder="New Password" />
@@ -44,12 +45,13 @@
   </form>
   </div>
 
-  <div id = "sign-out2">
+  <div id = "sign-out2" class="d-none">
 
-  <h2> Sign Out </h2>
+  <h5> Sign Out </h5>
   <form id="sign-out">
     <input type="submit" value="Sign Out" />
   </form>
+</div>
 </div>
 
 <!-- <div id ="change-pw2">
@@ -70,12 +72,71 @@
 
   <div id="list"></div>
 
-<h1>Desiderata
+<div id="main-header">
+  <div class="dropdown">
+    <span>
+      <h1>Desiderata
+      <img src="public/new-bucket2.png" alt="logo" width="140" height="140" id="logo">
+      </h1>
+    </span>
+    <div class="dropdown-content">
+      <p>Go placidly amid the noise and haste,
+        and remember what peace there may be in silence.
+        As far as possible without surrender
+        be on good terms with all persons.
+        Speak your truth quietly and clearly;
+        and listen to others,
+        even the dull and the ignorant;
+        they too have their story.
+
+Avoid loud and aggressive persons,
+they are vexations to the spirit.
+If you compare yourself with others,
+you may become vain and bitter;
+for always there will be greater and lesser persons than yourself.
+Enjoy your achievements as well as your plans.
+Keep interested in your own career, however humble;
+it is a real possession in the changing fortunes of time.
+Exercise caution in your business affairs;
+for the world is full of trickery.
+But let this not blind you to what virtue there is;
+many persons strive for high ideals;
+and everywhere life is full of heroism.
+Be yourself.
+Especially, do not feign affection.
+Neither be cynical about love;
+for in the face of all aridity and disenchantment
+it is as perennial as the grass.
+Take kindly the counsel of the years,
+gracefully surrendering the things of youth.
+Nurture strength of spirit to shield you in sudden misfortune.
+But do not distress yourself with dark imaginings.
+Many fears are born of fatigue and loneliness.
+Beyond a wholesome discipline,
+be gentle with yourself.
+You are a child of the universe,
+no less than the trees and the stars;
+you have a right to be here.
+And whether or not it is clear to you,
+no doubt the universe is unfolding as it should.
+Therefore be at peace with God,
+whatever you conceive Him to be,
+and whatever your labors and aspirations,
+in the noisy confusion of life keep peace with your soul.
+With all its sham, drudgery, and broken dreams,
+it is still a beautiful world.
+Be cheerful.
+Strive to be happy. </p>
+    </div>
+  </div>
+</div>
+
+<!-- <h1>Desiderata
 <img src="public/kick-the-bucket.jpg" alt="logo" width="140" height="140" id="logo">
-</h1>
+</h1> -->
 
 
-  <div class ="addActivity" id="addActivityId">
+  <div class ="addActivity d-none" id="addActivityId">
     <form id ="create">
       <input type="text" name="list[name]" placeholder="Title" />
       <input type="text" name="list[description]" placeholder="Description"  />
@@ -83,7 +144,7 @@
     </form>
   </div>
 
-  <div class ="getList" id="idGetList">
+  <div class ="getList d-none" id="idGetList">
     <form id ="getList">
       <input type="submit" value="Get Bucket List" />
     </form>

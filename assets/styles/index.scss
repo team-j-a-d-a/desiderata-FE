@@ -1,10 +1,71 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 
+body{
+background-image: url("https://stormandsky.com/gif/16.gif");
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
 h1 {
   font-family: 'Tangerine', serif;
   font-size: 70px;
   text-shadow: 4px 4px 4px #aaa;
-  text-align: center;
+  // text-align: center;
   color: black;
+  }
+
+.addActivity {
+  text-align: center;
+  margin: 10px
+}
+
+  .dropdown {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    font-family: 'Tangerine', serif;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    background-color: #acada6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .getList {
+    text-align: center;
+    margin: 10px
+  }
+
+#auth {
+  text-align: center;
+}
+
+#change-pw2 {
+  margin: 15px
+}
+
+#main-header {
+  text-align: center;
+  margin: 30px
+  }
+
+#message {
+  text-align: center;
+  }
+
+#sign-up2 {
+    margin: 15px
   }

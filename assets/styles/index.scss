@@ -1,6 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 
+// handlebars specific CSS
+.acivityBox {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding: 30px;
+}
+
 h1 {
   font-family: 'Tangerine', serif;
   font-size: 70px;

@@ -12,13 +12,5 @@ const actEvents = require('./activities/events')
 // require('./example')
 
 $(() => {
-  // $('#game-board').hide()
-  $('#sign-up').on('submit', actEvents.onSignUp)
-  $('#sign-in').on('submit', actEvents.onSignIn)
-  $('#change-password').on('submit', actEvents.onChangePassword)
-  $('#create-activity').on('submit', actEvents.onCreateActivity)
-  $('#sign-out').on('submit', actEvents.onSignOut)
   $('#get-activities').on('submit', actEvents.onGetActivities)
-
-  actEvents.addHandlers()
 })

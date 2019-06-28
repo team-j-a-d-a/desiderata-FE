@@ -9,5 +9,5 @@ const activeEvents = require('./scripts/activities/events')
 $(() => {
   // your JS code goes here
   // Activities
-  $('#create').on('submit', activeEvents.onAddActivityEvents)
+  $('#create').on('submit', activeEvents.onAddActivity)
 })

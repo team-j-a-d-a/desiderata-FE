@@ -5,7 +5,7 @@ const store = require('../scripts/store')
 const addActivity = (formData) => {
   console.log(store)
   return $.ajax({
-    url: config.apiUrl + `/pokemons`,
+    url: config.apiUrl + `/activities`,
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token

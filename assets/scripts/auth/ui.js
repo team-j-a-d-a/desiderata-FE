@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
-  console.log('success', responseData)
+  // console.log('success', responseData)
   $('#message').removeClass('d-none')
   $('#message').text('You have successfully signed up!').addClass('alert-success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
@@ -24,27 +24,18 @@ const onSignInSuccess = responseData => {
   $('#addActivityId').removeClass('d-none')
   $('#bucketList').removeClass('d-none')
   $('#SOCP').removeClass('d-none')
-  console.log('success', responseData)
-  // $('#createForHide').removeClass('d-none')
+  // console.log('success', responseData)
   $('#message').removeClass('d-none')
   $('#message').text("You're in! Welcome!").addClass('alert-success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
-  // $('#sign-out2').removeClass('d-none')
-  // $('#change-pw2').removeClass('d-none')
   $('#getList').removeClass('d-none')
-  // $('#sign-in2').addClass('d-none')
   $('#SUSI').addClass('d-none')
   $('form').trigger('reset')
-  // whenever we sign in successfully, the user is returned in the response so we store it
-  // for any of our authenticated API calls
-  // 'responseData.user' contains 'responseData.user.token'
-
   store.user = responseData.user
-  // //console.log('store is', store)
 }
 
 const onSignInFailure = responseData => {
-  console.log('failure', responseData)
+  // console.log('failure', responseData)
   $('#message').removeClass('d-none')
   $('#message').text('Sign in failed. Try Again!').addClass('alert-danger')
   setTimeout(() => $('#message').addClass('d-none'), 2500)

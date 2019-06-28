@@ -15,4 +15,5 @@ $(() => {
   $('#change-pw').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create').on('submit', activeEvents.onAddActivity)
+  $('#get-activities').on('submit', activeEvents.onGetActivities)
 })

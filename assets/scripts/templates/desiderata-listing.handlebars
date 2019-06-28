@@ -2,15 +2,20 @@
 <!-- ID is user id -->
 <!--  -->
 
-{{#each lists as |list|}}
+Handlebars.registerHelper("activityStrike", function(activityDone) {
+  phoneNumber = phoneNumber.toString();
+  return "(" + phoneNumber.substr(0,3) + ") " + phoneNumber.substr(3,3) + "-" + phoneNumber.substr(6,4);
+});
+
+{{#each activities as |activity|}}
   {{log list}}
-  <section data-id="{{list.id}}">
+  <section data-id="{{activity.id}}">
   <div class=activityBox>
     <h6>Title:</h6>
       <div>
         <p>
-          {{#if list.title}}
-            {{list.title}}
+          {{#if activity.title}}
+            {{activity.title}}
           {{else}}
             No title provided
           {{/if}}
@@ -22,8 +27,8 @@
     <h6>ID:</h6>
       <div>
         <p>
-        {{#if list.id}}
-          {{list.id}}
+        {{#if activity.id}}
+          {{activity.id}}
         {{else}}
           No id provided.
         {{/if}}
@@ -35,8 +40,8 @@
     <h6>Description:</h6>
     <div>
       <p>
-        {{#if list.description}}
-          {{list.description}}
+        {{#if activity.description}}
+          {{activity.description}}
         {{else}}
           No description provided
         {{/if}}
@@ -44,37 +49,21 @@
     </div>
   </div>
 
-  <div class=activityBox>
-    <h6>Completed:</h6>
-    <div>
-      <p>
-        {{#if list.status=true}}
-          <p class="list-true">
-            {{list.status}}
-          </p>
-        {{else}}
-        <p class="list-false">
-          {{list.status}}
-        </p>
-      </p>
-    </div>
-  </div>
 
 </section>
 
 <!-- Activity PATCH update -->
     <h6>Update Activity</h6>
-      <div class="message-box"></div>
-        <form class="update-form" data-id="{{activity.id}}">
-          <input name="activity[title]" value="" type="text" placeholder='Title' data-id="{{activity.id}}" required>
+      <form class="update-activity" data-id="{{activity.id}}">
+        <input name="activity[title]" value="" type="text" placeholder='Title' data-id="{{activity.id}}" required>
 
-          <input name="activity[description]" value="" type="text" placeholder='Description' data-id="{{activity.id}}" required>
+        <input name="activity[description]" value="" type="text" placeholder='Description' data-id="{{activity.id}}" required>
 
-          <input name="activity[completed]" value="" type="boolean" placeholder='Completed' data-id="{{activity.id}}" required>
-          <input type="submit" data-id="" class="editButton btn btn-secondary" value="Update Activity">
-        </form>
+        <input name="activity[completed]" value="" type="boolean" placeholder='Completed' data-id="{{activity.id}}" required>
+        <input type="submit" data-id="" class="editButton btn btn-secondary" value="Update Activity">
+      </form>
 
 <!-- Activity DELETE destroy -->
-      <button type="button" data-id="{{activity.id}}" class="btn btn-danger remove-appliance">Delete Activity</button>
+      <button type="button" data-id="{{activity.id}}" class="btn btn-danger remove-activity">Delete Activity</button>
 
 {{/each}}

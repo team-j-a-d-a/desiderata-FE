@@ -1,36 +1,54 @@
 'use strict'
 
-const desiderataTemplate = require('../templates/appliance-listing.handlebars')
+const desiderataTemplate = require('../templates/desiderata-listing.handlebars')
 
 const onCreateActivitySuccess = responseData => {
-  $('#message').text('Add Activity success. Click Show All Activities to view')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#list').text('Add Activity success. Click Show All Activities to view')
+  $('#list').removeClass()
+  $('#list').addClass('success')
   $('#sign-up').trigger('reset')
   $('#sign-in').trigger('reset')
-  $('#change-pw').trigger('reset')
-  $('#add-tool').trigger('reset')
-  $('.update-toolForm').trigger('reset')
-  $('#add-appliance').trigger('reset')
-  $('.update-form').trigger('reset')
-  $('#content').hide()
+  // $('#change-pw').trigger('reset')
+  // $('#add-tool').trigger('reset')
+  // $('.update-toolForm').trigger('reset')
+  // $('#add-appliance').trigger('reset')
+  // $('.update-form').trigger('reset')
+  // $('#content').hide()
 }
 
-const onShowAllActivitiesSuccess = function (data, responseData) {
+const onShowAllActivitySuccess = function (responseData) {
   const activityHtml = desiderataTemplate({ activities: responseData.activities })
-  $('#message').text('Show Activities success')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('#change-pw').trigger('reset')
-  $('#add-tool').trigger('reset')
-  $('.update-toolForm').trigger('reset')
-  $('#add-appliance').trigger('reset')
-  $('.update-form').trigger('reset')
-  $('#content').show()
-  $('#content').html(activityHtml)
+  $('#list').text('Show Activities success')
+  $('#list').removeClass()
+  $('#list').addClass('success')
+  // $('#change-pw').trigger('reset')
+  // $('#add-tool').trigger('reset')
+  // $('.update-toolForm').trigger('reset')
+  // $('#add-appliance').trigger('reset')
+  // $('.update-form').trigger('reset')
+  // $('#content').show()
+  $('.d-none').html(activityHtml)
+}
+
+const onDestroyActivitySuccess = responseData => {
+  $('#list').text('Destroy Activity success. Click Show All Activities to see')
+  $('#list').removeClass()
+  $('#list').addClass('success')
+  $('#sign-up').trigger('reset')
+  $('#sign-in').trigger('reset')
+}
+
+const onUpdateActivitySuccess = responseData => {
+  $('#list').text('Update Activity success. Click Show All Activities to see')
+  $('#list').removeClass()
+  $('#list').addClass('success')
+  $('#sign-up').trigger('reset')
+  $('#sign-in').trigger('reset')
 }
 
 module.exports = {
   onCreateActivitySuccess,
-  onShowAllActivitiesSuccess
+  onShowAllActivitySuccess,
+  onDestroyActivitySuccess,
+  onUpdateActivitySuccess
 }

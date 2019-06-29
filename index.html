@@ -59,18 +59,14 @@
 
   <div class ="addActivity" id="addActivityId">
     <form id ="create">
-      <input type="text" name="list[name]" placeholder="Title" />
-      <input type="text" name="list[description]" placeholder="Description"  />
+      <input type="text" name="activity[name]" placeholder="Title" />
+      <input type="text" name="activity[description]" placeholder="Description"  />
       <input type="submit" value="Add new item" />
     </form>
   </div>
 
-  <div class ="getList" id="idGetList">
-    <form id ="getList">
-      <input type="submit" value="Get Bucket List" />
-    </form>
-  </div>
+  <button id="getList" type="button">Get Bucket List</button>
 
-  <div id="bucketList" class="d-none"></div>
+  <div id="bucketList">placeholder</div>
     </body>
 </html>

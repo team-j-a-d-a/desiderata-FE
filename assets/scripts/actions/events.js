@@ -2,24 +2,21 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onCreateActivity = (event) => {
+const onAddActivity = (event) => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
   api.postActivity(formData)
-    .then(ui.onCreateActivitySuccess)
-    .catch(ui.onCreateActivityFailure)
+    .then(ui.onAddActivitySuccess)
+    .catch(ui.onAddActivityFailure)
 }
 
 const onShowAllActivity = (event) => {
   event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
-  api.getActivity(formData)
+  // const form = event.target
+  // const formData = getFormFields(form)
+  api.getActivity()
     .then(ui.onShowAllActivitySuccess)
-    // .then(data => {
-    //   ui.onShowAllActivitiesSuccess(messageCheck, data)
-    // })
     .catch(ui.onShowAllActivityFailure)
 }
 
@@ -50,7 +47,7 @@ const onDestroyActivity = (event) => {
 }
 
 module.exports = {
-  onCreateActivity,
+  onAddActivity,
   onShowAllActivity,
   onDestroyActivity,
   onUpdateActivity

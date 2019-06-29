@@ -8,12 +8,16 @@
 const activityEvents = require('./actions/events.js')
 
 const authEvents = require('./auth/events')
-const activeEvents = require('./activities/events')
+// const activeEvents = require('./activities/events')
 
 $(() => {
-  $('#create').on('submit', activeEvents.onAddActivity)
-  $('#getList').on('submit', activityEvents.onShowAllActivities)
-  $('.d-none').on('submit', '.update-activity', activityEvents.onUpdateActivity)
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#change-pw').on('submit', authEvents.onChangePassword)
+  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#create').on('submit', activityEvents.onAddActivity)
+  $('#getList').on('click', activityEvents.onShowAllActivity)
+  $('#bucketList').on('submit', '.update-activity', activityEvents.onUpdateActivity)
   $('#create').on('submit', activityEvents.onCreateActivity)
-  $('.d-none').on('click', '.remove-activity', activityEvents.onDestroyActivity)
+  $('#bucketList').on('click', '.remove-activity', activityEvents.onDestroyActivity)
 })

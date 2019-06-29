@@ -26,14 +26,13 @@ const patchActivity = (formData, id) => {
   })
 }
 
-const getActivity = (formData) => {
+const getActivity = () => {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/activities/',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: ''
+    }
   })
 }
 

@@ -6,11 +6,9 @@ const onAddActivity = (event) => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log('form data is ', formData)
+  // console.log('form data is ', formData) // REMINDER TO REMOVE
   api.postActivity(formData)
-    .then(console.log('add activity success'))
     .then(ui.onAddActivitySuccess)
-    .catch(console.log('add activity failure'))
     .catch(ui.onAddActivityFailure)
 }
 

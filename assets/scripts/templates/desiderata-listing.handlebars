@@ -1,18 +1,6 @@
 
 {{#each activities as |activity|}}
-  {{log activity}}
     <section data-id="{{activity._id}}">
-      <h6>Completed:</h6>
-        <div>
-          <p>
-            {{#if activity.completed}}
-            <div class="completed">{{activity.completed}}</div>
-            {{else}}
-            <div>{{activity.completed}}</div>
-            {{/if}}
-          </p>
-        </div>
-
         <h6>Title:</h6>
           <div>
             <p>
@@ -27,10 +15,10 @@
         <h6>Description:</h6>
         <div>
           <p>
-            {{#if activity.description}}
-              {{activity.description}}
+            {{#if activity.completed}}
+              <div class="completed">{{activity.description}}</div>
             {{else}}
-              No description provided
+              {{activity.description}}
             {{/if}}
           </p>
         </div>
@@ -43,7 +31,8 @@
 
         <input name="activity[description]" value="" type="text" placeholder='Description' data-id="{{activity._id}}" required>
 
-        <select name="activity[completed]" data-id="{{activity._id}}">>
+        <select name="activity[completed]" data-id="{{activity._id}}">
+          <option value="{{activity.completed}}"></option>
           <option value=false>Incomplete</option>
           <option value=true>Complete</option>
         </select>
@@ -54,5 +43,4 @@
 
 <!-- Activity DELETE destroy -->
       <button type="button" data-id="{{activity._id}}" class="btn btn-danger remove-activity">Delete Activity</button>
-      {{log activity.description}}
 {{/each}}

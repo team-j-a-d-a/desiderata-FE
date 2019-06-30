@@ -22,18 +22,17 @@ const onAddActivityFailure = responseData => {
 
 const onShowAllActivitySuccess = function (responseData) {
   // const activityJson = JSON.stringify(responseData)
-  console.log(desiderataTemplate)
   const activityHtml = desiderataTemplate({ activities: responseData.activities })
   $('#list').text('Show Activities success')
   $('#list').removeClass()
   $('#list').addClass('success')
   $('#bucketList').html(activityHtml)
-  console.log('success')
+  // console.log('success')
 }
 
 const onShowAllActivityFailure = responseData => {
-  console.log('fail')
-  // $('#list').text('Show Activity failed.')
+  // console.log('fail')
+  $('#list').text('Show Activity failed.')
 }
 
 const onDestroyActivitySuccess = responseData => {

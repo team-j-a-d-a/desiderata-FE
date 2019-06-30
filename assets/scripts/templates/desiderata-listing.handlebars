@@ -2,27 +2,27 @@
 {{#each activities as |activity|}}
   {{log activity}}
     <section data-id="{{activity._id}}">
-        <h6>Title:</h6>
-          <div>
-            <p>
-              {{#if activity.title}}
-                {{activity.title}}
-              {{else}}
-                No title provided
-              {{/if}}
-            </p>
-          </div>
-
-        <h6>ID:</h6>
-          <div>
-            <p>
-            {{#if activity._id}}
-              {{activity._id}}
+      <h6>Completed:</h6>
+        <div>
+          <p>
+            {{#if activity.completed}}
+            <div class="completed">{{activity.completed}}</div>
             {{else}}
-              No id provided.
+            <div>{{activity.completed}}</div>
             {{/if}}
           </p>
         </div>
+
+        <h6>Title:</h6>
+          <div>
+            <p>
+              {{#if activity.completed}}
+                <div class="completed">{{activity.title}}</div>
+              {{else}}
+                {{activity.title}}
+              {{/if}}
+            </p>
+          </div>
 
         <h6>Description:</h6>
         <div>
@@ -34,18 +34,7 @@
             {{/if}}
           </p>
         </div>
-
-      <h6>Completed:</h6>
-      <div>
-        <p>
-          {{#if activity.completed}}
-            <div class="completed">{{activity.completed}}</div>
-          {{else}}
-            <div>{{activity.completed}}</div>
-          {{/if}}
-        </p>
-      </div>
-  </section>
+    </section>
 
 <!-- Activity PATCH update -->
     <h6>Update Activity</h6>
@@ -55,8 +44,8 @@
         <input name="activity[description]" value="" type="text" placeholder='Description' data-id="{{activity._id}}" required>
 
         <select name="activity[completed]" data-id="{{activity._id}}">>
-          <option value="completed[false]">Incomplete</option>
-          <option value="completed[true]">Complete</option>
+          <option value=false>Incomplete</option>
+          <option value=true>Complete</option>
         </select>
 
         <!-- <input name="activity[completed]" value="" type="boolean" placeholder='Completed' data-id="{{activity.id}}" required> -->

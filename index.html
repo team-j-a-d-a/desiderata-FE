@@ -59,14 +59,14 @@
 
   <div class ="addActivity" id="addActivityId">
     <form id ="create">
-      <input type="text" name="activity[name]" placeholder="Title"/>
+      <input type="text" name="activity[title]" placeholder="Title"/>
       <input type="text" name="activity[description]" placeholder="Description"/>
       <!-- Added radio buttons to try and solve 422 issue -->
       <!-- Formerly activity[completed] did not have a form at all -->
-      <input type="radio" id="complete" name="activity[completed]" value="Complete"/>
+      <!-- <input type="radio" id="complete" name="activity[completed]" value='true' />
         <label for="activity[completed]">Completed</label>
-      <input type="radio" id="incomplete" name="activity[completed]" value="Incomplete" checked/>
-        <label for="incomplete">Incomplete</label>
+      <input type="radio" id="incomplete" name="activity[completed]" value='false' checked />
+        <label for="incomplete">Incomplete</label> -->
       <input type="submit" value="Add new item" />
     </form>
   </div>

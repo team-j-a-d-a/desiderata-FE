@@ -7,7 +7,9 @@ const onAddActivity = (event) => {
   const form = event.target
   const formData = getFormFields(form)
   api.postActivity(formData)
+    .then(console.log('add activity success'))
     .then(ui.onAddActivitySuccess)
+    .catch(console.log('add activity failure'))
     .catch(ui.onAddActivityFailure)
 }
 
@@ -38,7 +40,7 @@ const onDestroyActivity = (event) => {
   event.preventDefault()
   const id = $(event.target).data('id')
   // const messageCheck = 'delete'
-  api.delLabs(id)
+  api.delActivity(id)
     .then(ui.onDestroyActivitySuccess)
     // .then(reShowLabs => {
     //   onShowLabs(event, messageCheck)

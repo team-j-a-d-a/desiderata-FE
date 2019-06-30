@@ -1,7 +1,7 @@
 
 {{#each activities as |activity|}}
   {{log activity}}
-    <section data-id="{{activity.id}}">
+    <section data-id="{{activity._id}}">
         <h6>Title:</h6>
           <div>
             <p>
@@ -16,8 +16,8 @@
         <h6>ID:</h6>
           <div>
             <p>
-            {{#if activity.id}}
-              {{activity.id}}
+            {{#if activity._id}}
+              {{activity._id}}
             {{else}}
               No id provided.
             {{/if}}
@@ -37,22 +37,33 @@
 
       <h6>Completed:</h6>
       <div>
-
+        <p>
+          {{#if activity.completed}}
+            <div class="completed">{{activity.completed}}</div>
+          {{else}}
+            <div>{{activity.completed}}</div>
+          {{/if}}
+        </p>
       </div>
   </section>
 
 <!-- Activity PATCH update -->
     <h6>Update Activity</h6>
-      <form class="update-activity" data-id="{{activity.id}}">
-        <input name="activity[title]" value="" type="text" placeholder='Title' data-id="{{activity.id}}" required>
+      <form class="update-activity" data-id="{{activity._id}}">
+        <input name="activity[title]" value="" type="text" placeholder='Title' data-id="{{activity._id}}" required>
 
-        <input name="activity[description]" value="" type="text" placeholder='Description' data-id="{{activity.id}}" required>
+        <input name="activity[description]" value="" type="text" placeholder='Description' data-id="{{activity._id}}" required>
 
-        <input name="activity[completed]" value="" type="boolean" placeholder='Completed' data-id="{{activity.id}}" required>
+        <select name="activity[completed]" data-id="{{activity._id}}">>
+          <option value="completed[false]">Incomplete</option>
+          <option value="completed[true]">Complete</option>
+        </select>
+
+        <!-- <input name="activity[completed]" value="" type="boolean" placeholder='Completed' data-id="{{activity.id}}" required> -->
         <input type="submit" data-id="" class="editButton btn btn-secondary" value="Update Activity">
       </form>
 
 <!-- Activity DELETE destroy -->
-      <button type="button" data-id="{{activity.id}}" class="btn btn-danger remove-activity">Delete Activity</button>
+      <button type="button" data-id="{{activity._id}}" class="btn btn-danger remove-activity">Delete Activity</button>
       {{log activity.description}}
 {{/each}}

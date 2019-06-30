@@ -5,8 +5,8 @@ const config = require('../config.js')
 
 const postActivity = (formData) => {
   return $.ajax({
-    url: config.apiUrl + '/activities/',
     method: 'POST',
+    url: config.apiUrl + '/activities/',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },

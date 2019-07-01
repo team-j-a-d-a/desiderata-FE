@@ -7,7 +7,7 @@ const onAddActivity = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
   api.addActivity(formData)
     .then(ui.onAddActivitySuccess)
     .catch(ui.onAddActivityFailure)

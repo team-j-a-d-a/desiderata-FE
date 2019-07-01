@@ -1,11 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 
+// // handlebars specific CSS
+.completed {
+  text-decoration: line-through;
+}
+
+// .activityBox {
+//   margin-left: auto;
+//   padding: 30px;
+
 body{
 background-image: url("https://stormandsky.com/gif/16.gif");
 background-size: cover;
 // background-repeat: no-repeat;
 background-attachment: fixed;
+
 }
 
 h1 {

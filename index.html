@@ -160,11 +160,25 @@ Strive to be happy. </p>
 
   <div class ="addActivity d-none" id="addActivityId">
     <form id ="create">
+
+      <input type="text" name="activity[title]" placeholder="Title" />
+      <input type="text" name="activity[description]" placeholder="Description" />
+      <!-- Added radio buttons to try and solve 422 issue -->
+      <!-- Formerly activity[completed] did not have a form at all -->
+      <!-- <input type="radio" id="complete" name="activity[completed]" value='true' />
+        <label for="activity[completed]">Completed</label>
+      <input type="radio" id="incomplete" name="activity[completed]" value='false' checked />
+        <label for="incomplete">Incomplete</label> -->
+
       <input type="text" name="activity[title]" placeholder="Title" />
       <input type="text" name="activity[description]" placeholder="Description"  />
+
       <input type="submit" value="Add new item" />
     </form>
   </div>
+
+
+<!--   <button id="getList" type="button">Get Bucket List</button> -->
 
   <div class ="getList d-none" id="idGetList">
     <form id ="getList">
@@ -172,6 +186,7 @@ Strive to be happy. </p>
     </form>
   </div>
 
-  <div id="bucketList" class="d-none"></div>
+
+  <div id="bucketList">placeholder</div>
     </body>
 </html>

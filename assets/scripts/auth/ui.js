@@ -12,7 +12,7 @@ const onSignUpSuccess = responseData => {
 }
 
 const onSignUpFailure = responseData => {
-  console.log('failure', responseData)
+  // console.log('failure', responseData)
   $('#message').removeClass('d-none')
   $('#message').text('Sign up failed').addClass('alert-danger')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
@@ -26,6 +26,7 @@ const onSignInSuccess = responseData => {
   $('#bucketList').removeClass('d-none')
   $('#SOCP').removeClass('d-none')
   // console.log('success', responseData)
+
   $('#message').removeClass('d-none')
   $('#message').text("You're in! Welcome!").addClass('alert-success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
@@ -33,6 +34,9 @@ const onSignInSuccess = responseData => {
   $('#SUSI').addClass('d-none')
   $('form').trigger('reset')
   store.user = responseData.user
+
+  // console.log('store is', store)
+
 }
 
 const onSignInFailure = responseData => {

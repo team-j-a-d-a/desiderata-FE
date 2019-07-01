@@ -15,9 +15,11 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-pw').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+
   $('#create').on('submit', activityEvents.onAddActivity)
   $('#getList').on('click', activityEvents.onShowAllActivity)
   $('#bucketList').on('submit', '.update-activity', activityEvents.onUpdateActivity)
   // $('#create').on('submit', activityEvents.onCreateActivity)
   $('#bucketList').on('click', '.remove-activity', activityEvents.onDestroyActivity)
+  $('#get-activities').on('submit', activeEvents.onGetActivities)
 })

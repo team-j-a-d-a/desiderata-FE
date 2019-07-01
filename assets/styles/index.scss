@@ -1,20 +1,101 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 
-// handlebars specific CSS
+// // handlebars specific CSS
 .completed {
   text-decoration: line-through;
 }
 
-.activityBox {
-  margin-left: auto;
-  padding: 30px;
+// .activityBox {
+//   margin-left: auto;
+//   padding: 30px;
+
+body{
+background-image: url("https://stormandsky.com/gif/16.gif");
+background-size: cover;
+// background-repeat: no-repeat;
+background-attachment: fixed;
+
 }
 
 h1 {
   font-family: 'Tangerine', serif;
-  font-size: 70px;
+  font-size: 90px;
   text-shadow: 4px 4px 4px #aaa;
-  text-align: center;
+  // text-align: center;
   color: black;
+  margin-top: 85px;
   }
+
+.addActivity {
+  text-align: center;
+  margin: 10px
+}
+
+.auth3 {
+  margin-top: 50px;
+}
+  .dropdown {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-menu {
+  min-width: 20em
+}
+
+  .dropdown-content {
+    font-family: 'Tangerine', serif;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    // background-color: #acada6;
+    background-image: url("https://cdn.pixabay.com/photo/2015/11/08/05/58/scroll-1033117_1280.jpg");
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    opacity: .65;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .getList {
+    text-align: center;
+    margin: 10px
+  }
+
+  .navbar.bg-light.navbar-light {
+  background-color: rgba(255,255,255,.3) !important;
+}
+
+#auth {
+  text-align: center;
+}
+
+#change-pw2 {
+  margin: 15px
+}
+
+#main-header {
+  text-align: center;
+  margin: 30px
+  }
+
+#message {
+  text-align: center;
+  margin-top: 55px;
+  }
+
+// #sign-up2 {
+//     margin: 15px
+//   }
+
+#sign-out {
+  margin-right: 500px;
+  margin-left: 100px;
+}

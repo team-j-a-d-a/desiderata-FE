@@ -20,6 +20,7 @@ const onSignUpFailure = responseData => {
 }
 
 const onSignInSuccess = responseData => {
+  $('#message').removeClass('alert-danger')
   $('#idGetList').removeClass('d-none')
   $('#addActivityId').removeClass('d-none')
   $('#bucketList').removeClass('d-none')

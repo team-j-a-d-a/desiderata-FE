@@ -36,7 +36,6 @@ const onSignInSuccess = responseData => {
   store.user = responseData.user
 
   // console.log('store is', store)
-
 }
 
 const onSignInFailure = responseData => {
@@ -55,6 +54,7 @@ const onChangePasswordSuccess = () => {
   $('#message').addClass('success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('form').trigger('reset')
+  $('.update-activity').trigger('reset')
 }
 
 const onChangePasswordFailure = () => {
@@ -65,6 +65,7 @@ const onChangePasswordFailure = () => {
   // $('#message').removeClass()
   $('#message').addClass('failure')
   $('form').trigger('reset')
+  $('.update-activity').trigger('reset')
 }
 
 const onSignOutSuccess = () => {

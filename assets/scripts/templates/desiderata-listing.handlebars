@@ -1,30 +1,31 @@
 
 {{#each activities as |activity|}}
-    <section data-id="{{activity._id}}">
+    <section data-id="{{activity._id}}" class="handleStyle">
+      <div class="activity-box">
         <h6>Title:</h6>
-          <div>
-            <p>
-              {{#if activity.completed}}
-                <div class="completed">{{activity.title}}</div>
-              {{else}}
-                {{activity.title}}
-              {{/if}}
-            </p>
-          </div>
-
-        <h6>Description:</h6>
-        <div>
           <p>
             {{#if activity.completed}}
-              <div class="completed">{{activity.description}}</div>
+              <div class="completed">{{activity.title}}</div>
             {{else}}
-              {{activity.description}}
+              {{activity.title}}
             {{/if}}
           </p>
         </div>
+
+    <h6>Description:</h6>
+      <div class="activity-box">
+        <p>
+          {{#if activity.completed}}
+            <div class="completed">{{activity.description}}</div>
+          {{else}}
+            {{activity.description}}
+          {{/if}}
+        </p>
+      </div>
     </section>
 
 <!-- Activity PATCH update -->
+  <section class="handleStyle">
     <h6>Update Activity</h6>
       <form class="update-activity" data-id="{{activity._id}}">
         <input name="activity[title]" value="" type="text" placeholder='Title' data-id="{{activity._id}}" required>
@@ -43,4 +44,5 @@
 
 <!-- Activity DELETE destroy -->
       <button type="button" data-id="{{activity._id}}" class="btn btn-danger remove-activity">Delete Activity</button>
+  </section>
 {{/each}}

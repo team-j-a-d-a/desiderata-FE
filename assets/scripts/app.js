@@ -21,5 +21,5 @@ $(() => {
   $('#bucketList').on('submit', '.update-activity', activityEvents.onUpdateActivity)
   // $('#create').on('submit', activityEvents.onCreateActivity)
   $('#bucketList').on('click', '.remove-activity', activityEvents.onDestroyActivity)
-  $('#get-activities').on('submit', activeEvents.onGetActivities)
+  // $('#get-activities').on('submit', activeEvents.onGetActivities)
 })

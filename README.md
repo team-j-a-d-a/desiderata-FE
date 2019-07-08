@@ -1,4 +1,5 @@
 PURPOSE
+=========
 
 This app allows users to create, view, update, cross off and delete activities in their bucket list. A user can only view his/her bucket list activities, but not other users' activities.
 

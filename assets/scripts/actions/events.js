@@ -8,16 +8,18 @@ const onAddActivity = (event) => {
   const formData = getFormFields(form)
   // console.log('form data is ', formData) // REMINDER TO REMOVE
   api.postActivity(formData)
-    .then(ui.onAddActivitySuccess)
+    // .then(ui.onAddActivitySuccess)
+    .then(function (responseData) { onShowAllActivity(event, 'Activity successfully created') })
     .catch(ui.onAddActivityFailure)
 }
 
-const onShowAllActivity = (event) => {
+const onShowAllActivity = (event, txt) => {
   event.preventDefault()
   // const form = event.target
   // const formData = getFormFields(form)
   api.getActivity()
-    .then(ui.onShowAllActivitySuccess)
+    // .then(ui.onShowAllActivitySuccess)
+    .then(data => { ui.onShowAllActivitySuccess(data, txt) })
     .catch(ui.onShowAllActivityFailure)
 }
 
@@ -31,7 +33,8 @@ const onUpdateActivity = (event) => {
     // .then(reShowLabs => {
     //   onShowLabs(event, messageCheck)
     // })
-    .then(ui.onUpdateActivitySuccess)
+    // .then(ui.onUpdateActivitySuccess)
+    .then(function (responseData) { onShowAllActivity(event, 'Activity successfully updated') })
     .catch(ui.onUpdateActivityFailure)
 }
 
@@ -40,7 +43,8 @@ const onDestroyActivity = (event) => {
   const id = $(event.target).data('id')
   // const messageCheck = 'delete'
   api.delActivity(id)
-    .then(ui.onDestroyActivitySuccess)
+    // .then(ui.onDestroyActivitySuccess)
+    .then(function (responseData) { onShowAllActivity(event, 'Activity successfully deleted') })
     // .then(reShowLabs => {
     //   onShowLabs(event, messageCheck)
     // })

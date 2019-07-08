@@ -24,13 +24,13 @@ const onAddActivityFailure = responseData => {
   $('.update-activity').trigger('reset')
 }
 
-const onShowAllActivitySuccess = function (responseData) {
+const onShowAllActivitySuccess = function (responseData, txt) {
   // const activityJson = JSON.stringify(responseData)
   const activityHtml = desiderataTemplate({ activities: responseData.activities })
   $('#message').removeClass('d-none')
   $('#message').removeClass('alert-danger')
   $('#message').addClass('success')
-  $('#message').text('Showing all activities')
+  $('#message').text(txt)
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#create').trigger('reset')
   $('#change-pw').trigger('reset')

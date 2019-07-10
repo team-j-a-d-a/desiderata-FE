@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Desiderata</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="SUSI">
+          <a class="navbar-brand" href="#">Welcome!</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sign In
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <form class="px-4 py-3" id = "sign-in">
+        <div class="form-group">
+          <label for="exampleDropdownFormEmail1">Email address</label>
+          <input type="email" class="form-control" name=credentials[email] id="exampleDropdownFormEmail" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword1">Password</label>
+          <input type="password" class="form-control" name=credentials[password] id="exampleDropdownFormPassword" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sign Up
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <form class="px-4 py-3" id = "sign-up">
+        <div class="form-group">
+          <label for="exampleDropdownFormEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail1" name=credentials[email] placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword2" name=credentials[password] placeholder="Create Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" name=credentials[password_confirmation] placeholder="Confirm Your Password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+        </nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-none" id="SOCP">
+  <form id="sign-out">
+    <input type="submit" class="btn btn-danger" value="Sign Out" />
+  </form>
+  <form id="change-pw">
+    <input type="password" name="passwords[old]" placeholder="Old Password" />
+    <input type="password" name="passwords[new]" placeholder="New Password" />
+    <input type="submit" value="Change Password" />
+  </form>
+</nav>
+
+      <h2 id="message"></h2>
+
+  <div id="list"></div>
+
+<div id="main-header">
+  <div class="dropdown">
+    <span>
+      <h1>Desiderata
+      <img src="public/new-bucket2.png" alt="logo" width="140" height="140" id="logo">
+      </h1>
+    </span>
+    <div class="dropdown-content">
+      <p>Go placidly amid the noise and haste,
+        and remember what peace there may be in silence.
+        As far as possible without surrender
+        be on good terms with all persons.
+        Speak your truth quietly and clearly;
+        and listen to others,
+        even the dull and the ignorant;
+        they too have their story.
+
+Avoid loud and aggressive persons,
+they are vexations to the spirit.
+If you compare yourself with others,
+you may become vain and bitter;
+for always there will be greater and lesser persons than yourself.
+Enjoy your achievements as well as your plans.
+Keep interested in your own career, however humble;
+it is a real possession in the changing fortunes of time.
+Exercise caution in your business affairs;
+for the world is full of trickery.
+But let this not blind you to what virtue there is;
+many persons strive for high ideals;
+and everywhere life is full of heroism.
+Be yourself.
+Especially, do not feign affection.
+Neither be cynical about love;
+for in the face of all aridity and disenchantment
+it is as perennial as the grass.
+Take kindly the counsel of the years,
+gracefully surrendering the things of youth.
+Nurture strength of spirit to shield you in sudden misfortune.
+But do not distress yourself with dark imaginings.
+Many fears are born of fatigue and loneliness.
+Beyond a wholesome discipline,
+be gentle with yourself.
+You are a child of the universe,
+no less than the trees and the stars;
+you have a right to be here.
+And whether or not it is clear to you,
+no doubt the universe is unfolding as it should.
+Therefore be at peace with God,
+whatever you conceive Him to be,
+and whatever your labors and aspirations,
+in the noisy confusion of life keep peace with your soul.
+With all its sham, drudgery, and broken dreams,
+it is still a beautiful world.
+Be cheerful.
+Strive to be happy. </p>
+    </div>
+  </div>
+</div>
+
+<!-- <h1>Desiderata
+<img src="public/kick-the-bucket.jpg" alt="logo" width="140" height="140" id="logo">
+</h1> -->
+
+
+  <div class ="addActivity d-none" id="addActivityId">
+    <form id ="create">
+
+      <input type="text" name="activity[title]" placeholder="Title" required />
+      <input type="text" name="activity[description]" placeholder="Description" required />
+      <!-- Added radio buttons to try and solve 422 issue -->
+      <!-- Formerly activity[completed] did not have a form at all -->
+      <!-- <input type="radio" id="complete" name="activity[completed]" value='true' />
+        <label for="activity[completed]">Completed</label>
+      <input type="radio" id="incomplete" name="activity[completed]" value='false' checked />
+        <label for="incomplete">Incomplete</label> -->
+
+      <!-- <input type="text" name="activity[title]" placeholder="Title" />
+      <input type="text" name="activity[description]" placeholder="Description"  /> -->
+
+      <input type="submit" value="Add new item" />
+    </form>
+  </div>
+
+
+<!--   <button id="getList" type="button">Get Bucket List</button> -->
+
+  <div class ="getList d-none" id="idGetList">
+    <form id ="getList">
+      <input type="submit" value="Get Bucket List" />
+    </form>
+  </div>
+
+
+  <div id="bucketList"></div>
+    </body>
+</html>

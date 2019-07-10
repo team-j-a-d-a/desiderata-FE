@@ -26,15 +26,15 @@ const onAddActivityFailure = responseData => {
 
 const onShowAllActivitySuccess = function (responseData, txt) {
   // const activityJson = JSON.stringify(responseData)
-  const activityHtml = desiderataTemplate({ activities: responseData.activities })
   $('#message').removeClass('d-none')
   $('#message').removeClass('alert-danger')
-  $('#message').addClass('success')
+  $('#message').addClass('alert-success')
   $('#message').text(txt)
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#create').trigger('reset')
   $('#change-pw').trigger('reset')
   $('.update-activity').trigger('reset')
+  const activityHtml = desiderataTemplate({ activities: responseData.activities })
   $('#bucketList').html(activityHtml)
   // console.log('success')
 }

@@ -27,7 +27,6 @@ const onSignInSuccess = responseData => {
   $('#bucketList').removeClass('d-none')
   $('#SOCP').removeClass('d-none')
   // console.log('success', responseData)
-
   $('#message').removeClass('d-none')
   $('#message').text("You're in! Welcome!").addClass('alert-success')
   setTimeout(() => $('#message').addClass('d-none'), 2500)

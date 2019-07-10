@@ -32,7 +32,7 @@
 
         <input name="activity[description]" value="" type="text" placeholder='Description' data-id="{{activity._id}}" required>
 
-        <select name="activity[completed]" data-id="{{activity._id}}">
+        <select name="activity[completed]" data-id="{{activity._id}}" required>
           <option value="{{activity.completed}}"></option>
           <option value=false>Incomplete</option>
           <option value=true>Complete</option>

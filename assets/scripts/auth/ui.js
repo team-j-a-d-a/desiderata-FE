@@ -49,6 +49,7 @@ const onSignInFailure = responseData => {
 
 const onChangePasswordSuccess = () => {
   $('#message').removeClass('d-none')
+  $('#message').removeClass('alert-danger')
   $('#message').text('Changed password successfully!').addClass('alert-success')
   // $('#message').removeClass()
   $('#message').addClass('success')

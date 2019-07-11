@@ -29,15 +29,15 @@ How the app works:
 
 # Wireframe [here](https://bit.ly/321etkl)
 
-# Front-end Repo [here]([https://github.com/team-j-a-d-a/desiderata-FE](https://github.com/team-j-a-d-a/desiderata-FE))
+# Front-end Repo [here](https://github.com/team-j-a-d-a/desiderata-FE)
 
-# Back-end Repo [here]([https://github.com/team-j-a-d-a/desiderata-backEnd](https://github.com/team-j-a-d-a/desiderata-backEnd))
+# Back-end Repo [here](https://github.com/team-j-a-d-a/desiderata-backEnd)
 
-# Deployed Front-end Site [here]([https://team-j-a-d-a.github.io/desiderata-FE/](https://team-j-a-d-a.github.io/desiderata-FE/))
+# Deployed Front-end Site [here](https://team-j-a-d-a.github.io/desiderata-FE/)
 
-# Deployed Back-end Site [here]([https://polar-crag-68481.herokuapp.com/](https://polar-crag-68481.herokuapp.com/))
+# Deployed Back-end Site [here](https://polar-crag-68481.herokuapp.com/)
 
-# Routes Catalog [here]([https://bit.ly/2KNTf47](https://bit.ly/2KNTf47))
+# Routes Catalog [here](https://bit.ly/2KNTf47)
 
 # Technologies Used
 

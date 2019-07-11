@@ -42,6 +42,7 @@ How the app works:
 # Technologies Used
 
 **Front End** HTML 5 CSS JavaScript jQuery Bootstrap Handlebars JS
+
 **Back End** MongoDB Mongoose Express API
 
 # Planning, Process and Problem Solving
